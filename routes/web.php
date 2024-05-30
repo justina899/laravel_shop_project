@@ -29,6 +29,3 @@ Route::middleware(['auth', 'role:vendor'])->group(function () {
     Route::get('/vendor/dashboard', [VendorController::class, 'VendorDashboard'])->name('vendor.dashboard');
 });
 
-//registered middleware
-Route::get('/admin/dashboard', function () {})->middleware(Role::class);
-Route::get('/vendor/dashboard', function () {})->middleware(Role::class);
