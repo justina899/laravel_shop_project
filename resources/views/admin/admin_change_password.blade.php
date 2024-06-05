@@ -42,7 +42,7 @@
                                     <h6 class="mb-0">Old password</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="password" name="old_password" class="form-control @error('old_password') is-invalid @enderror" id="current_password" placeholder="Old Password" />
+                                    <input type="password" name="old_password" class="form-control @error('old_password') is-invalid @enderror" id="current_password" placeholder="Old password" />
                                     @error('old_password')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -54,7 +54,7 @@
                                     <h6 class="mb-0">New password</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="password" name="new_password" class="form-control @error('new_password') is-invalid @enderror" id="new_password" placeholder="New Password" />
+                                    <input type="password" name="new_password" class="form-control @error('new_password') is-invalid @enderror" id="new_password" placeholder="New password" />
                                     @error('new_password')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -66,14 +66,14 @@
                                     <h6 class="mb-0">Confirm new password</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="password" name="new_password_confirmation" class="form-control" id="new_password_confirmation" placeholder="Confirm New Password" /> 
+                                    <input type="password" name="new_password_confirmation" class="form-control" id="new_password_confirmation" placeholder="Confirm new password" /> 
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="submit" class="btn btn-primary px-4" value="Save Changes" />
+                                    <input type="submit" class="btn btn-primary px-4" value="Save changes" />
                                 </div>
                             </div>
                         </div>
