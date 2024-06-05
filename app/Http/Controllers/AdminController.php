@@ -48,7 +48,11 @@ class AdminController extends Controller
             $data['photo'] = $filename;
         }
         $data->save();
-        return redirect()->back();
+        $notification = array(
+            'message' => 'Admin profile updated successfully',
+            'alert-type' => 'success'
+        );
+        return redirect()->back()->with($notification);
     } //End Method 
 
 }
