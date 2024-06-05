@@ -55,4 +55,8 @@ class AdminController extends Controller
         return redirect()->back()->with($notification);
     } //End Method 
 
+    public function AdminChangePassword(){
+        return view('admin.admin_change_password');
+    } //End Method
+    
 }
