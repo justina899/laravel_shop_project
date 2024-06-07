@@ -52,7 +52,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                        <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data" >
+                        <form method="post" action="{{ route('vendor.profile.store') }}" enctype="multipart/form-data" >
 			            @csrf
                             <div class="row mb-3">
                                 <div class="col-sm-3">
@@ -114,7 +114,7 @@
                                     <h6 class="mb-0">Vendor info</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <textarea name="vendor_short_info" class="form-control" id="inputAddress2" placeholder="Information..." rows="3"></textarea>
+                                    <textarea name="vendor_short_info" class="form-control" id="inputAddress2" placeholder="Vendor info" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="row mb-3">
