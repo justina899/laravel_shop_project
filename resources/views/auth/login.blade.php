@@ -11,9 +11,9 @@
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/imgs/theme/favicon.svg') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/imgs/theme/favicon.svg') }}"/>
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css?v=5.3') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/main.css?v=5.3') }}"/>
 </head>
 <body>
 
@@ -49,10 +49,10 @@
                                         @csrf
 
                                         <div class="form-group">
-                                                <input type="email" id="email"  required="" name="email" placeholder="Username or Email *" />
+                                                <input type="email" id="email" required="" name="email" placeholder="Username or Email *"/>
                                             </div>
                                             <div class="form-group">
-                                                <input required="" id="password" type="password" name="password" placeholder="Your password *" />
+                                                <input required="" id="password" type="password" name="password" placeholder="Your password *"/>
                                             </div>
 
                                             <div class="login_footer form-group mb-50">
@@ -79,18 +79,18 @@
         </div>
     </main>
 
-        @include('frontend.body.footer')
+    @include('frontend.body.footer')
 
-        <!-- Preloader Start -->
-        <div id="preloader-active">
-            <div class="preloader d-flex align-items-center justify-content-center">
-                <div class="preloader-inner position-relative">
-                    <div class="text-center">
-                        <img src="{{ asset('frontend/assets/imgs/theme/loading.gif') }}" alt="" />
-                    </div>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="text-center">
+                    <img src="{{ asset('frontend/assets/imgs/theme/loading.gif') }}" alt=""/>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Vendor JS-->
     <script src="{{ asset('frontend/assets/js/vendor/modernizr-3.6.0.min.js') }}"></script>
