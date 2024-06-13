@@ -7,7 +7,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Middleware\Role;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 Route::get('/dashboard', function () {
