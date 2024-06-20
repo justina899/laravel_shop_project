@@ -167,7 +167,8 @@
                                     </div>
                                     <div class="card-body">
                                         
-                                        <form method="post" name="enq">
+                                        <form method="post" action="{{ route('user.profile.store') }}" enctype="multipart/form-data" >
+                                        @csrf
                                             <div class="row">
                                                 <div class="form-group col-md-6">
                                                     <label>User name<span class="required">*</span></label>
@@ -194,7 +195,7 @@
                                                     <input class="form-control" name="photo" type="file" value="{{ $userData->photo }}" id="image"/>
                                                 </div>
                                                 <div class="form-group col-md-12">
-                                                    <label>  <span class="required">*</span></label>
+                                                    <label>  <span class="required"></span></label>
                                                     <img id="showImage" src="{{ (!empty($userData->photo)) ? url('upload/user_images/'.$userData->photo) : url('upload/no_image.jpg') }}" alt="User" class="rounded-circle p-1 bg-primary" width="110">
                                                 </div>
                                                 

@@ -14,7 +14,7 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function() {
 
     Route::get('/dashboard', [UserController::class, 'UserDashboard'])->name('dashboard');
-    
+    Route::get('/dashboard', [UserController::class, 'UserDashboard'])->name('dashboard');
     
     }); // Group Milldeware End
 
