@@ -107,14 +107,14 @@
                                         <img class="svgInject" alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-heart.svg') }}" />
                                         <span class="pro-count blue">6</span>
                                     </a>
-                                    <a href="shop-wishlist.html"><span class="lable">Wishlist</span></a>
+                                    <a href="shop-wishlist.html"><span class="label">Wishlist</span></a>
                                 </div>
                                 <div class="header-action-icon-2">
                                     <a class="mini-cart-icon" href="shop-cart.html">
                                         <img alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-cart.svg') }}" />
                                         <span class="pro-count blue">2</span>
                                     </a>
-                                    <a href="shop-cart.html"><span class="lable">Cart</span></a>
+                                    <a href="shop-cart.html"><span class="label">Cart</span></a>
                                     <div class="cart-dropdown-wrap cart-dropdown-hm2">
                                         <ul>
                                             <li>
@@ -182,9 +182,9 @@
                                             </ul>
                                         </div>
                                     @else
-                                        <a href="{{ route('login') }}"><span class="lable ml-0">Login</span></a>
-                                            <span class="lable" style="margin-left: 2px; margin-right: 2px"> | </span>
-                                        <a href="{{ route('register') }}"><span class="lable ml-0">Register</span></a>
+                                        <a href="{{ route('login') }}"><span class="label ml-0">Login</span></a>
+                                            <span class="label" style="margin-left: 2px; margin-right: 2px"> | </span>
+                                        <a href="{{ route('register') }}"><span class="label ml-0">Register</span></a>
                                     @endauth
                                     
                                 </div>
