@@ -82,7 +82,7 @@
             },
             messages :{
                 brand_name: {
-                    required : 'Please Enter Brand Name',
+                    required : 'Please enter brand name',
                 },
             },
             errorElement : 'span', 
