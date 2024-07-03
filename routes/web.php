@@ -59,9 +59,9 @@ Route::middleware(['auth','role:admin'])->group(function() {
 
     // Brand All Route 
    Route::controller(BrandController::class)->group(function(){
-        Route::get('/all/brand' , 'AllBrand')->name('all.brand');
-        Route::get('/add/brand' , 'AddBrand')->name('add.brand');
-        Route::post('/brand/store' , 'BrandStore')->name('store.brand');
+        Route::get('/all/brand', 'AllBrand')->name('all.brand');
+        Route::get('/add/brand', 'AddBrand')->name('add.brand');
+        Route::post('/store/brand', 'StoreBrand')->name('store.brand');
    });
    
 }); // End Middleware 
