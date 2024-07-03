@@ -30,7 +30,7 @@ class BrandController extends Controller
 
         Brand::insert([
             'brand_name' => $request->brand_name,
-            'brand_slug' => strtolower(str_replace(' ', '-',$request->brand_name)),
+            'brand_slug' => strtolower(str_replace(' ', '-', $request->brand_name)),
             'brand_image' => $save_url, 
         ]);
 
