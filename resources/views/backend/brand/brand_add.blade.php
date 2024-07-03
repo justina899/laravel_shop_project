@@ -26,21 +26,21 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form method="post" action="{{ route('store.brand') }}" enctype="multipart/form-data" >
+                            <form id="myForm" method="post" action="{{ route('store.brand') }}" enctype="multipart/form-data" >
                                 @csrf
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Brand Name</h6>
+                                        <h6 class="mb-0">Brand name</h6>
                                     </div>
-                                    <div class="col-sm-9 text-secondary">
+                                    <div class="form-group col-sm-9 text-secondary">
                                         <input type="text" name="brand_name" class="form-control"   />
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <div class="col-sm-3">
-                                        <h6 class="mb-0">Brand Image </h6>
+                                        <h6 class="mb-0">Brand image </h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                         <input type="file" name="brand_image" class="form-control"  id="image"   />
@@ -71,6 +71,35 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#myForm').validate({
+            rules: {
+                brand_name: {
+                    required : true,
+                }, 
+            },
+            messages :{
+                brand_name: {
+                    required : 'Please Enter Brand Name',
+                },
+            },
+            errorElement : 'span', 
+            errorPlacement: function (error,element) {
+                error.addClass('invalid-feedback');
+                element.closest('.form-group').append(error);
+            },
+            highlight : function(element, errorClass, validClass){
+                $(element).addClass('is-invalid');
+            },
+            unhighlight : function(element, errorClass, validClass){
+                $(element).removeClass('is-invalid');
+            },
+        });
+    });
+    
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
