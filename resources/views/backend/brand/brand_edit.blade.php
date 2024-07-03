@@ -52,7 +52,7 @@
                                         <h6 class="mb-0"> </h6>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
-                                        <img id="showImage" src="{{ asset('$brand->brand_image') }}" alt="Admin" style="width:100px; height: 100px;"  >
+                                        <img id="showImage" src="{{ asset($brand->brand_image) }}" alt="Admin" style="width:100px; height: 100px;"  >
                                     </div>
                                 </div>
 
