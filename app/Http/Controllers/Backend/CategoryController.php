@@ -49,7 +49,7 @@ class CategoryController extends Controller
 
     public function UpdateCategory(Request $request){
 
-        $category_id = $request->id;
+        $cat_id = $request->id;
         $old_img = $request->old_image;
 
         if ($request->file('category_image')) {
@@ -66,7 +66,7 @@ class CategoryController extends Controller
                 unlink($old_img);
             }
 
-            Category::findOrFail($category_id)->update([
+            Category::findOrFail($cat_id)->update([
                 'category_name' => $request->category_name,
                 'category_slug' => strtolower(str_replace(' ', '-', $request->category_name)),
                 'category_image' => $save_url, 
@@ -80,7 +80,7 @@ class CategoryController extends Controller
             return redirect()->route('all.category')->with($notification); 
         } else {
 
-            Category::findOrFail($category_id)->update([
+            Category::findOrFail($cat_id)->update([
                 'category_name' => $request->category_name,
                 'category_slug' => strtolower(str_replace(' ', '-', $request->category_name)), 
             ]);
