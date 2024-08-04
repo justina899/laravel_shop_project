@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Subcategory extends Model
 {
     use HasFactory;
+    protected $guarded = []; //to make our all fields fillable
 }
