@@ -35,7 +35,7 @@
 					</a>
 					<ul>
 						<li> <a href="{{ route('all.category') }}"><i class="bx bx-right-arrow-alt"></i>All category</a></li>
-						<li> <a href="app-chat-box.html"><i class="bx bx-right-arrow-alt"></i>Add category</a></li>
+						<li> <a href="{{ route('add.category') }}"><i class="bx bx-right-arrow-alt"></i>Add category</a></li>
 					</ul>
 				</li>
 				<li class="menu-label">UI Elements</li>
