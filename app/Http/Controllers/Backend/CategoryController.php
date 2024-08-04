@@ -13,11 +13,11 @@ class CategoryController extends Controller
     public function AllCategory(){
         $categories = Category::latest()->get();
         return view('backend.category.category_all', compact('categories'));
-    } //End Method 
+    } //End method 
 
     public function AddCategory(){
         return view('backend.category.category_add');
-    } //End Method
+    } //End method
 
     public function StoreCategory(Request $request){
         $image = $request->file('category_image');
@@ -40,12 +40,12 @@ class CategoryController extends Controller
         );
 
         return redirect()->route('all.category')->with($notification);
-   } //End Method 
+   } //End method 
 
    public function EditCategory($id){
         $category = Category::findOrFail($id);
         return view('backend.category.category_edit', compact('category'));
-    } //End Method 
+    } //End method 
 
     public function UpdateCategory(Request $request){
 
@@ -92,5 +92,21 @@ class CategoryController extends Controller
 
             return redirect()->route('all.category')->with($notification); 
         } 
-    } //End Method 
+    } //End method 
+
+    public function DeleteCategory($id){
+
+        $category = Category::findOrFail($id);
+        $img = $category->category_image;
+        unlink($img ); 
+
+        Category::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Category deleted successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+    } //End method 
 }
