@@ -70,7 +70,7 @@ Route::middleware(['auth','role:admin'])->group(function() {
    // Category all route 
    Route::controller(CategoryController::class)->group(function(){
     Route::get('/all/category', 'AllCategory')->name('all.category');
-    Route::get('/add/brand', 'AddBrand')->name('add.brand');
+    Route::get('/add/category', 'AddCategory')->name('add.category');
     Route::post('/store/brand', 'StoreBrand')->name('store.brand');
     Route::get('/edit/brand/{id}' , 'EditBrand')->name('edit.brand');
     Route::post('/update/brand' , 'UpdateBrand')->name('update.brand');
