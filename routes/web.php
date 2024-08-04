@@ -7,7 +7,7 @@ use App\Http\Controllers\VendorController;
 use App\Http\Middleware\Role;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\BrandController;
-
+use App\Http\Controllers\Backend\CategoryController;
 
 Route::get('/', function () {
     return view('frontend.index');
@@ -68,7 +68,7 @@ Route::middleware(['auth','role:admin'])->group(function() {
    });
 
    // Category all route 
-   Route::controller(BrandController::class)->group(function(){
+   Route::controller(CategoryController::class)->group(function(){
     Route::get('/all/brand', 'AllBrand')->name('all.brand');
     Route::get('/add/brand', 'AddBrand')->name('add.brand');
     Route::post('/store/brand', 'StoreBrand')->name('store.brand');
