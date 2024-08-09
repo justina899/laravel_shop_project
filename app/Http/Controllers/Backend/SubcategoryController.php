@@ -15,4 +15,8 @@ class SubcategoryController extends Controller
         $subcategories = Subcategory::latest()->get();
         return view('backend.subcategory.subcategory_all', compact('subcategories'));
     } //End method 
+
+    public function AddSubcategory(){
+        return view('backend.subcategory.subcategory_add');
+    } //End method
 }
