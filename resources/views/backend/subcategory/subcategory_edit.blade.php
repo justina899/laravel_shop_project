@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-body">
 
-                            <form id="myForm" method="post" action="{{ route('store.subcategory') }}">
+                            <form id="myForm" method="post" action="{{ route('update.subcategory') }}">
                                 @csrf
 
                                 <div class="row mb-3">
