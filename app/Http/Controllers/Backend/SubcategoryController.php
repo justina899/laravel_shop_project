@@ -35,5 +35,12 @@ class SubcategoryController extends Controller
         );
 
         return redirect()->route('all.subcategory')->with($notification);
-   } //End method 
+    } //End method 
+
+    public function EditSubcategory($id){
+        $categories = Category::orderBy('category_name', 'ASC')->get();
+        $subcategory = Subcategory::findOrFail($id);
+        return view('backend.subcategory.subcategory_edit', compact('categories', 'subcategory'));
+    } //End method 
+
 }
