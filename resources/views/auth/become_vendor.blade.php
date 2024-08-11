@@ -39,19 +39,35 @@
                                 <div class="login_wrap widget-taber-content background-white">
                                     <div class="padding_eight_all bg-white">
                                         <div class="heading_s1">
-                                            <h1 class="mb-5">Create an Account</h1>
-                                            <p class="mb-30">Already have an account?
-                                                <a href="{{ route('login') }}">Login</a>
+                                            <h1 class="mb-5">Become vendor</h1>
+                                            <p class="mb-30">Already have a vendor account?
+                                                <a href="{{ route('vendor.login') }}">Vendor login</a>
                                             </p>
                                         </div>
 
                                         <form method="POST" action="{{ route('register') }}">
                                         @csrf
                                             <div class="form-group">
-                                                <input type="text" id="name" required="" name="name" placeholder="Username" />
+                                                <input type="text" id="name" required="" name="name" placeholder="Shop name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" id="username" required="" name="username" placeholder="User name" />
                                             </div>
                                             <div class="form-group">
                                                 <input type="email"  id="email" required="" name="email" placeholder="Email" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" id="phone" required="" name="phone" placeholder="Phone" />
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="vendor_join" class="form-select mb-3" aria-label="Default select example">
+                                                    <option selected="">Select join date</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                    <option value="2026">2026</option>
+                                                    <option value="2027">2027</option>
+                                                    <option value="2028">2028</option>
+                                                </select>
                                             </div>
                                             <div class="form-group">
                                                 <input required=""  id="password"  type="password" name="password" placeholder="Password" />
