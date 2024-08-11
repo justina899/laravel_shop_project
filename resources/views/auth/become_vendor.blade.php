@@ -45,7 +45,7 @@
                                             </p>
                                         </div>
 
-                                        <form method="POST" action="{{ route('register') }}">
+                                        <form method="POST" action="{{ route('vendor.register') }}">
                                         @csrf
                                             <div class="form-group">
                                                 <input type="text" id="name" required="" name="name" placeholder="Shop name" />
