@@ -82,4 +82,8 @@ class VendorController extends Controller
         return back()->with("status", " Password changed successfully");
 
     } //End Method 
+
+    public function BecomeVendor(){
+        return view('auth.become_vendor');
+    } //End Method 
 }
