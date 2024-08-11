@@ -56,6 +56,8 @@ Route::middleware(['auth', 'role:vendor'])->group(function () {
 Route::get('/admin/login', [AdminController::class, 'AdminLogin']);
 Route::get('/vendor/login', [VendorController::class, 'VendorLogin']);
 
+Route::get('/become/vendor', [VendorController::class, 'BecomeVendor'])->name('become.vendor');
+
 Route::middleware(['auth','role:admin'])->group(function() {
 
     // Brand all routes 
